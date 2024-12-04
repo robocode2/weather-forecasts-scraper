@@ -70,7 +70,6 @@ ITEM_PIPELINES = {
     'weatherscraper.pipelines.PostgreSQLPipeline': 200,
 
 }
-DATABASE_URL = os.getenv('PROD_DATABASE_URL')
 
 
 

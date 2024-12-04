@@ -11,8 +11,19 @@ from collections import defaultdict
 class PostgreSQLPipeline:
     def open_spider(self, spider):
         try:
+            """ self.connection = psycopg2.connect(
+                host='127.0.0.1',
+                database='testforecastsdb',
+                user='postgres',
+                password='IDnowLOV123!',
+                port='5434'
+            ) """
             self.connection = psycopg2.connect(
-
+                database='defaultdb',
+                user='doadmin',
+                password='AVNS_CtP8-riN5ITOU4EoaFS',
+                host='dbaas-db-1559411-do-user-16960082-0.c.db.ondigitalocean.com',  # Host URL
+                port='25060'
             )
             self.cursor = self.connection.cursor()
             self.city_cache = {}
